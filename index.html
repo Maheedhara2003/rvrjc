@@ -6,20 +6,9 @@
     <title>College Cultural Page</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="https://rvrjcce.ac.in/literary/sicologo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            background-color: #f4f4f4;
-        }
-
-        /* Make the navbar logo circular */
-.navbar-brand img {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px; /* Ensure the image is a perfect square */
-    object-fit: cover; /* Ensures the logo fits inside its container */
-}
-
-
+        
         .hero-section {
             background: url('event/sico\ website\ \(1\).gif') no-repeat center center/cover;
             height: 400px;
@@ -37,87 +26,9 @@
         .hero-section p {
             font-size: 1.25rem;
         }
-        .carousel-item img {
-            height: 400px;
-            object-fit: cover;
-        }
-        .event-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .event-card:hover {
-            transform: translateY(-10px);
-        }
-        .gallery-item img {
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-        .gallery-item img:hover {
-            transform: scale(1.05);
-        }
-        .testimonial-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            text-align: center;
-        }
-        .testimonial-card img {
-            border-radius: 50%;
-            margin-bottom: 15px;
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-        }
-        .latest-news .section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #343a40;
+        .bg-dark {
+background-color: #270f3b !important;
 }
-
-.latest-news .section-subtitle {
-    font-size: 1.1rem;
-    color: #6c757d;
-    margin-bottom: 2rem;
-}
-
-.latest-news .card-header {
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.latest-news .event-item {
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-.latest-news .event-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.latest-news .event-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.latest-news .event-date {
-    font-size: 0.9rem;
-    color: #6c757d;
-}
-
-.latest-news .btn {
-    margin-top: 10px;
-}
-
-.bg-dark {
-    background-color: #270f3b !important;
-}
-
     </style>
 </head>
 <body>
@@ -145,10 +56,10 @@
                     <a class="nav-link" href="about.html" style="color: white; text-decoration: none;">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#gallery" style="color: white; text-decoration: none;">Cultural</a>
+                    <a class="nav-link" href="c" style="color: white; text-decoration: none;">Cultural</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#activities" style="color: white; text-decoration: none;">Sico</a>
+                    <a class="nav-link" href="" style="color: white; text-decoration: none;">Sico</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#testimonials" style="color: white; text-decoration: none;">Photo Gallery</a>
@@ -160,6 +71,8 @@
         </div>
     </div>
 </nav>
+
+
 
 <!-- Custom JavaScript to handle Navbar toggle -->
 <script>
@@ -327,21 +240,21 @@
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="event-card p-4 text-center">
-                    <img src="event/music club logo (1).png" class="img-fluid mb-3" alt="Drama">
-                    <h5>Drama Club</h5>
+                    <img src="logos/3.png" class="img-fluid mb-3" alt="Drama">
+                    <h5>Club Spectrum</h5>
                     <p>Engage in captivating performances and dramatic expressions.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="event-card p-4 text-center">
-                    <img src="event/music club logo.png" class="img-fluid mb-3" alt="Music">
-                    <h5>Music Club</h5>
-                    <p>Showcase your musical talents in various genres and styles.</p>
+                    <img src="logos/3.png" class="img-fluid mb-3" alt="Music">
+                    <h5>Photography Club</h5>
+                    <p>Capture your creativity through photography and beyond!</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="event-card p-4 text-center">
-                    <img src="event/music club logo (2).png" class="img-fluid mb-3" alt="Art">
+                    <img src="logos/9.png" class="img-fluid mb-3" alt="Art">
                     <h5>Book Club</h5>
                     <p>Unlock your creativity with painting, sketching, and more!</p>
                 </div>

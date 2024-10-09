@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Cultural Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="https://rvrjcce.ac.in/literary/sicologo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cultural Page Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <!-- Navbar Brand / Logo -->
+        <a class="navbar-brand" href="index.php">
+    <img src="https://rvrjcce.ac.in/literary/sicologo.jpg" alt="College Logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+    <span>Extra curricular & Co curricular activities committee</span>
+</a>    
+        <!-- Navbar Toggler for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#culturalNavbar" aria-controls="culturalNavbar" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler-btn">
+            <span class="navbar-toggler-icon"></span>
+            <span class="close-icon" style="display:none;">&#10005;</span> <!-- Close Icon -->
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="culturalNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html" style="color: white; text-decoration: none;">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cultural.html" style="color: white; text-decoration: none;">Cultural</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#activities" style="color: white; text-decoration: none;">Sico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials" style="color: white; text-decoration: none;">Photo Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact" style="color: white; text-decoration: none;">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Custom JavaScript to handle Navbar toggle -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const togglerBtn = document.getElementById('navbar-toggler-btn');
+        const navbarNav = document.getElementById('culturalNavbar');
+        const closeIcon = document.querySelector('.close-icon');
+        const togglerIcon = document.querySelector('.navbar-toggler-icon');
+
+        // Toggle the visibility of the icons and collapse the menu
+        togglerBtn.addEventListener('click', function() {
+            const isNavbarOpen = navbarNav.classList.contains('show');
+
+            if (isNavbarOpen) {
+                closeIcon.style.display = 'none';
+                togglerIcon.style.display = 'block';
+            } else {
+                closeIcon.style.display = 'block';
+                togglerIcon.style.display = 'none';
+            }
+        });
+
+        // When the close icon is clicked, collapse the navbar and switch back the icons
+        closeIcon.addEventListener('click', function() {
+            navbarNav.classList.remove('show');
+            closeIcon.style.display = 'none';
+            togglerIcon.style.display = 'block';
+        });
+    });
+</script>
+
+<!-- SICO Section -->
+<div class="container mt-5">
+    <style>
+        .sico-logo {
+            max-width: 200px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+    
+    <div class="container my-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="mb-3">SICO (Student Integrated Committee)</h2>
+                <p class="text" style="text-align: justify;">
+                    The Student Integrated Committee has a large number of student-initiated clubs for the development of personality, managerial knowledge and skills, values, and ethics. These qualities are necessary for making an honorable living and contributing to the socioeconomic development and welfare of society. The SICO committee works in coordination with the Literary and Cultural Committee.
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="https://rvrjcce.ac.in/literary/sicologo.jpg" class="img-fluid rounded shadow sico-logo" alt="SICO Logo">
+            </div>
+        </div>
+    </div>
+    
+
+    <h3 class="mt-4">Objectives:</h3>
+    <ol>
+        <li>Induction of 'service' in education for imparting 'education for total transformation'.</li>
+        <li>Development of integrated manpower with technological and managerial knowledge and skills, 
+            values and ethics to contribute to the socio-economic welfare of society.</li>
+        <li>Providing basic infrastructure to old-age homes, orphanages, asylums, and blind schools.</li>
+        <li>Propagating the ideals and benefits of 'right to education' to students of remote areas.</li>
+        <li>Enhancing the efficiency and effectiveness of technical education and welfare activities.</li>
+        <li>Organizing workshops and seminars.</li>
+    </ol>
+
+    <h4 class="mt-5">Various Student Initiated Clubs under SICO:</h4>
+
+    <!-- Club 1: CLUB ENDEAVOR -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h4 class="card-title">CLUB ENDEAVOR</h4>
+        </div>
+        <div class="card-body">
+            <h5><strong>Aim:</strong> The club is a student-initiated literary club, aiming at sharpening literary skills among students.</h5>
+            <h6><strong>Objectives:</strong></h6>
+            <ul>
+                <li>To familiarize students with the competitive environment of the real world.</li>
+                <li>To equip students with vocal and written techniques essential for success in today’s competitive environment.</li>
+                <li>To enhance interaction between students from different branches.</li>
+                <li>To foster creativity in young minds.</li>
+            </ul>
+            <h6><strong>Activities:</strong></h6>
+            <p>The club organizes literary events preparing students to participate in inter-collegiate festivals, developing leadership and team spirit for future endeavors.</p>
+        </div>
+    </div>
+
+    <!-- Club 2: RED ANTS -->
+    <div class="card mb-4">
+        <div class="card-header bg-danger text-white">
+            <h4 class="card-title">RED ANTS</h4>
+        </div>
+        <div class="card-body">
+            <h5><strong>Aim:</strong> The club aims to nurture fine arts skills in students through activities like pencil shading, mehendi, and t-shirt painting.</h5>
+            <h6><strong>Objectives:</strong></h6>
+            <ul>
+                <li>To expose students to real-world challenges.</li>
+                <li>To unite students through cultural activities.</li>
+                <li>To encourage creativity and hidden talents.</li>
+            </ul>
+            <h6><strong>Activities:</strong></h6>
+            <p>The club organizes various art activities fostering creativity and overall development of students.</p>
+        </div>
+    </div>
+
+    <!-- Club 3: CLUB INSPIRAZE -->
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">
+            <h4 class="card-title">CLUB INSPIRAZE</h4>
+        </div>
+        <div class="card-body">
+            <h5><strong>Aim:</strong> To inspire students through enlightening speeches delivered by professionals.</h5>
+            <h6><strong>Objectives:</strong></h6>
+            <ul>
+                <li>To make every student an achiever.</li>
+                <li>To help students discover their true interests.</li>
+                <li>To aid students in choosing role models.</li>
+            </ul>
+            <h6><strong>Activities:</strong></h6>
+            <p>The club arranges guest lectures by professionals to build emotional character and inspire students.</p>
+        </div>
+    </div>
+
+    <!-- Club 4: CLUB WALTZ -->
+    <div class="card mb-4">
+        <div class="card-header bg-warning text-dark">
+            <h4 class="card-title">CLUB WALTZ</h4>
+        </div>
+        <div class="card-body">
+            <h5><strong>Aim:</strong> To provide a platform for students interested in dance.</h5>
+            <h6><strong>Objectives:</strong></h6>
+            <ul>
+                <li>To promote team spirit and competition.</li>
+                <li>To encourage discussions to enhance dance skills.</li>
+            </ul>
+            <h6><strong>Activities:</strong></h6>
+            <p>The club organizes dance competitions, encouraging participation at state and national levels.</p>
+        </div>
+    </div>
+
+    <!-- Add more clubs here if needed... -->
+
+    <!-- Events Conducted by SICO -->
+    <h4 class="mt-5">Various Club Events Conducted by SICO</h4>
+    <ul class="list-unstyled">
+        <li><a href="#" class="events-link">2023-2024</a></li>
+        <li><a href="#" class="events-link">2022-2023</a></li>
+        <li><a href="#" class="events-link">2020-2021</a></li>
+        <li><a href="#" class="events-link">2019-2020</a></li>
+        <li><a href="#" class="events-link">2018-2019</a></li>
+        <li><a href="#" class="events-link">2017-2018</a></li>
+        <li><a href="#" class="events-link">2016-2017</a></li>
+        <li><a href="#" class="events-link">2015-2016</a></li>
+        <li><a href="#" class="events-link">2014-2015</a></li>
+        <li><a href="#" class="events-link">2013-2014</a></li>
+        <!-- Add more event years here... -->
+    </ul>
+
+    <!-- List of SICO Students -->
+    <h4 class="mt-5">List of SICO Students</h4>
+    <ul class="list-unstyled">
+        <li><a href="#" class="students-link">2013-2014</a></li>
+        <li><a href="#" class="students-link">2014-2015</a></li>
+        <li><a href="#" class="students-link">2015-2016</a></li>
+        <li><a href="#" class="students-link">2016-2017</a></li>
+        <li><a href="#" class="students-link">2017-2018</a></li>
+        <li><a href="#" class="students-link">2018-2019</a></li>
+        <li><a href="#" class="students-link">2019-2020</a></li>
+        <li><a href="#" class="students-link">2020-2021</a></li>
+        <li><a href="#" class="students-link">2021-2022</a></li>
+        <li><a href="#" class="students-link">2022-2023</a></li>
+        <li><a href="#" class="students-link">2023-2024</a></li>
+        <!-- Add more student years here... -->
+    </ul>
+
+    <!-- Prize Winners in SICO Events -->
+    <h4 class="mt-5">Prize Winners in Events Conducted by SICO</h4>
+    <ul class="list-unstyled">
+        <li><a href="#" class="winners-link">Academic Year 2023-2024</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2022-2023</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2020-2021</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2019-2020</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2018-2019</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2017-2018</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2016-2017</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2015-2016</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2014-2015</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2013-2014</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2012-2013</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2011-2012</a></li>
+        <li><a href="#" class="winners-link">Academic Year 2010-2011</a></li>
+        <!-- Add more prize winner years here... -->
+    </ul>
+</div>
+
+    <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+            <!-- About Us Column -->
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">About Us</h5>
+                <p>
+                    Our college cultural fest is a vibrant celebration of creativity and talent, providing a platform for students to showcase their artistic abilities. Join us and be a part of this amazing journey.
+                </p>
+            </div>
+
+            <!-- Links Column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">Home</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">Events</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">Gallery</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">Contact Us</a>
+                </p>
+            </div>
+
+            <!-- Contact Us Column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact Us</h5>
+                <p>
+                    <i class="fas fa-home mr-3"></i> Chowdavaram,
+GUNTUR-522 019,
+                </p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> rvrjcce.ac.in
+                </p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> +91 9494414529
+                </p>
+                
+            </div>
+
+            <!-- Social Media Column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Follow Us</h5>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <hr class="mb-4">
+        
+        <!-- Copyright -->
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+                <p class="text-center text-md-start">© 2024 All Rights Reserved by:
+                    <a href="#" class="text-warning" style="text-decoration: none;">
+                        <strong>College Cultural Fest</strong>
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-5 col-lg-4">
+               
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Add Font Awesome for social media icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
