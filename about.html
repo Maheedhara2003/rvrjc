@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Cultural Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="https://rvrjcce.ac.in/literary/sicologo.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
+        /* Make the navbar logo circular */
+.navbar-brand img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px; /* Ensure the image is a perfect square */
+    object-fit: cover; /* Ensures the logo fits inside its container */
+}
+
+
+        .hero-section {
+            background: url('event/sico\ website\ \(1\).gif') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero-section p {
+            font-size: 1.25rem;
+        }
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+        .event-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .event-card:hover {
+            transform: translateY(-10px);
+        }
+        .gallery-item img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+        .testimonial-card img {
+            border-radius: 50%;
+            margin-bottom: 15px;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        .latest-news .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.latest-news .section-subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+.latest-news .card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.latest-news .event-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.latest-news .event-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.latest-news .event-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.latest-news .event-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.latest-news .btn {
+    margin-top: 10px;
+}
+
+.bg-dark {
+    background-color: #270f3b !important;
+}
+
+.dark{
+    background-color: #270f3b;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<!-- Cultural Page Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <!-- Navbar Brand / Logo -->
+        <a class="navbar-brand" href="index.php">
+    <img src="https://rvrjcce.ac.in/literary/sicologo.jpg" alt="College Logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+    <span>Extra curricular & Co curricular activities committee</span>
+</a>
+
+        
+        <!-- Navbar Toggler for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#culturalNavbar" aria-controls="culturalNavbar" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler-btn">
+            <span class="navbar-toggler-icon"></span>
+            <span class="close-icon" style="display:none;">&#10005;</span> <!-- Close Icon -->
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="culturalNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about" style="color: white; text-decoration: none;">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery" style="color: white; text-decoration: none;">Cultural</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#activities" style="color: white; text-decoration: none;">Sico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials" style="color: white; text-decoration: none;">Photo Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact" style="color: white; text-decoration: none;">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Custom JavaScript to handle Navbar toggle -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const togglerBtn = document.getElementById('navbar-toggler-btn');
+        const navbarNav = document.getElementById('culturalNavbar');
+        const closeIcon = document.querySelector('.close-icon');
+        const togglerIcon = document.querySelector('.navbar-toggler-icon');
+
+        // Toggle the visibility of the icons and collapse the menu
+        togglerBtn.addEventListener('click', function() {
+            const isNavbarOpen = navbarNav.classList.contains('show');
+
+            if (isNavbarOpen) {
+                closeIcon.style.display = 'none';
+                togglerIcon.style.display = 'block';
+            } else {
+                closeIcon.style.display = 'block';
+                togglerIcon.style.display = 'none';
+            }
+        });
+
+        // When the close icon is clicked, collapse the navbar and switch back the icons
+        closeIcon.addEventListener('click', function() {
+            navbarNav.classList.remove('show');
+            closeIcon.style.display = 'none';
+            togglerIcon.style.display = 'block';
+        });
+    });
+</script>
+<div class="container mt-5 mb-5 p-4 bg-light rounded shadow">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center text-primary mb-4">About Literary and Cultural Committee</h2>
+            <p style="text-align: justify;">
+                Extra Curricular & Co Curricular Activities Committee is working with an objective of giving a holistic approach to professional higher education. The Committee intends to create an atmosphere, which is intellectually and aesthetically stimulating for the community on the campus. In the pursuit of its objective, Extra & Co curricular activities are held regularly. In addition, the committee also organizes workshops, seminars, lectures, and demonstrations. The activities are informal and are intended to sensitize the academic world to other dimensions of human experience and knowledge, with the hope that this would enrich the lives of students and make them aware of their social responsibilities and understand the implications of their actions. The main responsibility of this committee is to ensure smooth conduct of ANNUAL DAY celebrations and selecting the students team to participate in Inter Collegiate Cultural festivals.
+            </p>
+            <h4 class="text-primary mt-4">Objectives:</h4>
+            <ol class="mb-4">
+                <li>To strive to recognize and appreciate the dormant multi-talents of students.</li>
+                <li>To serve as a platform to exhibit and enrich their skills.</li>
+                <li>To encourage the multi-talents of students through proper guidance.</li>
+                <li>To develop traits like coordination and team spirit among the students.</li>
+                <li>To act as a conduit to translate their gifted talents and usher them into a unique joy.</li>
+                <li>To initiate student participation by the formation of a student activities club.</li>
+            </ol>
+
+            <h4 class="text-primary">Staff Members of Cultural Committee</h4>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead class="table-dark" >
+                        <tr>
+                            <th>Faculty Name</th>
+                            <th>Designation</th>
+                            <th>Department</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Dr. P. V. Kishore Babu</td><td>Associate Professor</td><td>EEE</td><td>Convener</td></tr>
+                        <tr><td>Dr. V. Ramakoteswara Rao</td><td>Associate Professor</td><td>ME</td><td>Co-Convener</td></tr>
+                        <tr><td>Dr. P. Samatha Chowdary</td><td>Associate Professor</td><td>CE</td><td>Member</td></tr>
+                        <tr><td>Mr. J. Ranga Raya Chowdary</td><td>Assistant Professor</td><td>ME</td><td>Member</td></tr>
+                        <tr><td>Dr. P. Rohini Kumar</td><td>Associate Professor</td><td>ChE</td><td>Member</td></tr>
+                        <tr><td>Dr. M. Anitha</td><td>Associate Professor</td><td>EEE</td><td>Member</td></tr>
+                        <tr><td>Mrs. M. Sunitha</td><td>Assistant Professor</td><td>ECE</td><td>Member</td></tr>
+                        <tr><td>Mrs. M. Vasavi</td><td>Assistant Professor</td><td>CSE</td><td>Member</td></tr>
+                        <tr><td>Mrs. K. Venkata Anusha</td><td>Assistant Professor</td><td>CSE (AI & ML)</td><td>Member</td></tr>
+                        <tr><td>Dr. Lakshmikanth Paleti</td><td>Associate Professor</td><td>CSBS</td><td>Member</td></tr>
+                        <tr><td>Mr. P. Srinivasa Rao</td><td>Assistant Professor</td><td>CSE (DS)</td><td>Member</td></tr>
+                        <tr><td>Dr. A. Yaswanth Kumar</td><td>Associate Professor</td><td>IT</td><td>Member</td></tr>
+                        <tr><td>Mr. P. Siddhardha</td><td>Assistant Professor</td><td>MBA</td><td>Member</td></tr>
+                        <tr><td>Mrs. V. Sujatha Lakshmi</td><td>Assistant Professor</td><td>MCA</td><td>Member</td></tr>
+                        <tr><td>Mr. Sreeram Nimmagadda</td><td>Assistant Professor</td><td>Physics</td><td>Member</td></tr>
+                        <tr><td>Dr. N. Phani Pooja</td><td>Assistant Professor</td><td>English</td><td>Member</td></tr>
+                        <tr><td>Dr. D. Rajani</td><td>Associate Professor</td><td>English</td><td>Member</td></tr>
+                        <tr><td>Mrs. Ch. Vijaya Lakshmi</td><td>Assistant Professor (Pro term)</td><td>CSE</td><td>Member</td></tr>
+                        <tr><td>Smt. P. Vaniree</td><td>Sr. Tech-A</td><td>ECE</td><td>Member</td></tr>
+                        <tr><td>Mr. G. R. N. Chowdary</td><td>Tech-B</td><td>ME</td><td>Member</td></tr>
+                        <tr><td>Mr. G. S. Prasad</td><td>Tech-B</td><td>ECE</td><td>Member</td></tr>
+                        <tr><td>Sri V. Mastan Rao</td><td>Tech-B</td><td>EEE</td><td>Member</td></tr>
+                        <tr><td>Sri B. N. Chandrasekhar</td><td>Hardware Tech</td><td>IT</td><td>Member</td></tr>
+                        <tr><td>Sri A. Sambasiva Rao</td><td>Jr. Assistant</td><td>Office</td><td>Member</td></tr>
+                        <tr><td>Sri K. Hari Babu</td><td>Sr. Assistant</td><td>Office</td><td>Member</td></tr>
+                        <tr><td>Mr. P. Hidayathulla</td><td>Sr. Assistant</td><td>Office</td><td>Member</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+            <!-- About Us Column -->
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">About Us</h5>
+                <p>
+                    Our college cultural fest is a vibrant celebration of creativity and talent, providing a platform for students to showcase their artistic abilities. Join us and be a part of this amazing journey.
+                </p>
+            </div>
+
+            <!-- Links Column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">Home</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">Events</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">Gallery</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">Contact Us</a>
+                </p>
+            </div>
+
+            <!-- Contact Us Column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact Us</h5>
+                <p>
+                    <i class="fas fa-home mr-3"></i> Chowdavaram,
+GUNTUR-522 019,
+                </p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> rvrjcce.ac.in
+                </p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> +91 9494414529
+                </p>
+                
+            </div>
+
+            <!-- Social Media Column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Follow Us</h5>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <hr class="mb-4">
+        
+        <!-- Copyright -->
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+                <p class="text-center text-md-start">© 2024 All Rights Reserved by:
+                    <a href="#" class="text-warning" style="text-decoration: none;">
+                        <strong>College Cultural Fest</strong>
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-5 col-lg-4">
+               
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Add Font Awesome for social media icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
