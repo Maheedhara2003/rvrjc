@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Fest Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background-color: #1e1e1e;
+    }
+    .btn-primary {
+      background-color: #bb86fc;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #3700b3;
+    }
+    .bg-secondary {
+      background-color: #1c1c1c !important;
+    }
+    .card {
+      background-color: #1e1e1e;
+      border: 1px solid #444;
+    }
+    footer {
+      background-color: #1e1e1e;
+    }
+    /* Vibrant text styles */
+    h1 {
+      background: linear-gradient(45deg, #ff6f61, #6a5acd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h2, h3 {
+      background: linear-gradient(45deg, #00bcd4, #ffc107);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .lead {
+      font-size: 1.25rem;
+      background: linear-gradient(45deg, #ff5722, #ffc107);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .countdown-value {
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #4caf50, #8bc34a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .shape {
+      position: absolute;
+      z-index: 1;
+      opacity: 0.5;
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+    .shape1 {
+      top: 10%;
+      left: 5%;
+      width: 150px; /* Adjusted for smaller screens */
+      height: 150px;
+      background: radial-gradient(circle, #ff5722, transparent);
+      border-radius: 50%;
+    }
+    .shape2 {
+      top: 60%;
+      right: 5%;
+      width: 200px; /* Adjusted for smaller screens */
+      height: 200px;
+      background: radial-gradient(circle, #6a5acd, transparent);
+      border-radius: 50%;
+    }
+    .shape3 {
+      bottom: 20%;
+      left: 30%;
+      width: 300px; /* Adjusted for smaller screens */
+      height: 300px;
+      background: radial-gradient(circle, #00bcd4, transparent);
+      border-radius: 50%;
+    }
+  </style>
+  <script>
+    // Countdown timer script
+    document.addEventListener('DOMContentLoaded', function () {
+      const festDate = new Date("2024-12-25T00:00:00").getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = festDate - now;
+
+        if (distance < 0) {
+          clearInterval(timer);
+          return;
+        }
+
+        document.getElementById('days').textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
+        document.getElementById('hours').textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById('minutes').textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById('seconds').textContent = Math.floor((distance % (1000 * 60)) / 1000);
+      }
+
+      const timer = setInterval(updateCountdown, 1000);
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Background Shapes -->
+  <div class="shape shape1"></div>
+  <div class="shape shape2"></div>
+  <div class="shape shape3"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-3">
+    <div class="container-fluid"> <!-- Changed to container-fluid for full width -->
+      <a class="navbar-brand animate__animated animate__fadeInDown" href="#">FestiFusion 2024</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- Adjusted alignment for links -->
+          <li class="nav-item">
+            <a href="#events" class="nav-link animate__animated animate__fadeInDown">Events</a>
+          </li>
+          <li class="nav-item">
+            <a href="#schedule" class="nav-link animate__animated animate__fadeInDown">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tickets" class="nav-link animate__animated animate__fadeInDown">Registrations</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link animate__animated animate__fadeInDown">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="container text-center my-5 py-5">
+    <h1 class="display-3 fw-bold animate__animated animate__zoomIn">FestiFusion 2024</h1>
+    <p class="lead mb-5 animate__animated animate__fadeInUp">Experience the ultimate college fest with music, art, and innovation. Join us for an unforgettable celebration of talent and creativity!</p>
+    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mb-5 animate__animated animate__pulse">
+      <a href="#tickets" class="btn btn-primary">Registration</a>
+      <a href="#learn-more" class="btn btn-outline-light">Learn More</a>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="row text-center">
+      <div class="col-6 col-md">
+        <div class="p-3 bg-secondary rounded animate__animated animate__fadeInLeft">
+          <h2 id="days" class="countdown-value">0</h2>
+          <p>Days</p>
+        </div>
+      </div>
+      <div class="col-6 col-md">
+        <div class="p-3 bg-secondary rounded animate__animated animate__fadeInRight">
+          <h2 id="hours" class="countdown-value">0</h2>
+          <p>Hours</p>
+        </div>
+      </div>
+      <div class="col-6 col-md">
+        <div class="p-3 bg-secondary rounded animate__animated animate__fadeInLeft">
+          <h2 id="minutes" class="countdown-value">0</h2>
+          <p>Minutes</p>
+        </div>
+      </div>
+      <div class="col-6 col-md">
+        <div class="p-3 bg-secondary rounded animate__animated animate__fadeInRight">
+          <h2 id="seconds" class="countdown-value">0</h2>
+          <p>Seconds</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Events Section -->
+  <section id="events" class="container py-5">
+    <h2 class="text-center mb-5 animate__animated animate__fadeInUp">Featured Events</h2>
+    <div class="row">
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card text-white text-center p-4 animate__animated animate__fadeInLeft">
+          <h3 class="card-title">Live Concerts</h3>
+          <p class="card-text">Experience electrifying performances from top artists and emerging talents.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card text-white text-center p-4 animate__animated animate__fadeInDown">
+          <h3 class="card-title">Film Festival</h3>
+          <p class="card-text">Discover thought-provoking short films and documentaries from student filmmakers.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card text-white text-center p-4 animate__animated animate__fadeInRight">
+          <h3 class="card-title">Literary Events</h3>
+          <p class="card-text">Engage in poetry slams, book discussions, and creative writing workshops.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-center py-4 animate__animated animate__fadeInUp">
+    <p>&copy; 2024 FestiFusion. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS and Animate.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
