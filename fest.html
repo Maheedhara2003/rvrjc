@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>College Fest Landing Page</title>
+  <title>Colorido</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
@@ -127,7 +127,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-3">
     <div class="container-fluid"> <!-- Changed to container-fluid for full width -->
-      <a class="navbar-brand animate__animated animate__fadeInDown" href="#">FestiFusion 2024</a>
+      <a class="navbar-brand animate__animated animate__fadeInDown" href="#">Colorido 2024</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -152,7 +152,7 @@
 
   <!-- Hero Section -->
   <div class="container text-center my-5 py-5">
-    <h1 class="display-3 fw-bold animate__animated animate__zoomIn">FestiFusion 2024</h1>
+    <h1 class="display-3 fw-bold animate__animated animate__zoomIn">COlorido 2024</h1>
     <p class="lead mb-5 animate__animated animate__fadeInUp">Experience the ultimate college fest with music, art, and innovation. Join us for an unforgettable celebration of talent and creativity!</p>
     <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mb-5 animate__animated animate__pulse">
       <a href="#tickets" class="btn btn-primary">Registration</a>
@@ -187,6 +187,39 @@
       </div>
     </div>
   </div>
+
+  <!-- Banner Section -->
+<div class="banner py-5 text-center">
+  <div class="banner-content">
+    <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Welcome to Colorido 2024!</h1>
+    <p class="lead mb-4 animate__animated animate__fadeInUp">A festival celebrating creativity, innovation, and talent!</p>
+    <a href="#tickets" class="btn btn-primary btn-lg animate__animated animate__pulse">Get Your Tickets Now</a>
+  </div>
+</div>
+
+<style>
+  .banner {
+    background: url('YOUR_IMAGE_URL_HERE') no-repeat center center; /* Replace with your image URL */
+    background-size: cover;
+    position: relative;
+    color: #ffffff;
+  }
+  .banner-content {
+    position: relative;
+    z-index: 2;
+  }
+  .banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+  }
+</style>
+
 
   <!-- Featured Events Section -->
   <section id="events" class="container py-5">
