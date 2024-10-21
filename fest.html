@@ -85,7 +85,7 @@
       border-radius: 50%;
     }
     .shape3 {
-      bottom: 20%;
+      bottom: 12%;
       left: 30%;
       width: 300px; /* Adjusted for smaller screens */
       height: 300px;
@@ -191,19 +191,27 @@
   <!-- Banner Section -->
 <div class="banner py-5 text-center">
   <div class="banner-content">
+    <!--
     <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Welcome to Colorido 2024!</h1>
     <p class="lead mb-4 animate__animated animate__fadeInUp">A festival celebrating creativity, innovation, and talent!</p>
-    <a href="#tickets" class="btn btn-primary btn-lg animate__animated animate__pulse">Get Your Tickets Now</a>
+    <a href="#tickets" class="btn btn-primary btn-lg animate__animated animate__pulse">Get Your Tickets Now</a>-->
   </div>
 </div>
 
 <style>
   .banner {
-    background: url('YOUR_IMAGE_URL_HERE') no-repeat center center; /* Replace with your image URL */
-    background-size: cover;
-    position: relative;
-    color: #ffffff;
-  }
+    background: url('https://rvrjcce.ac.in/colorido2k24/img/poster.jpg') no-repeat center center; /* Replace with your image URL */
+    background-size: 80%; /* Adjusted size to 80% of the container */
+    height: 150vh; /* Keep the height as is, or adjust if needed */
+    width: 100%; /* Set width to 100% to occupy full width */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative; /* Set position to relative for the overlay */
+    padding: 0 15px; /* Adjusted padding */
+}
+
+
   .banner-content {
     position: relative;
     z-index: 2;
