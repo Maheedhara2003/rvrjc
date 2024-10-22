@@ -199,8 +199,8 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 368px) {
     .hero-banner {
-        height: 150px;
+        height: 100px;
     }
 }
