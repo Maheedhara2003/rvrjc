@@ -126,6 +126,11 @@ body {
 
 
 
+.bg-dark{
+    background-color: #270f3b !important;
+}
+
+
 
 /* Modal Body */
 .modal-body img {
